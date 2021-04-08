@@ -1,52 +1,34 @@
 ﻿using System;
 
-namespace _05_alua_04_03_21_contas_3
+namespace modulo_resto_divisao
 {
     class Program
     {
         static void Main(string[] args)
         {
-            /*
-             * O  etanol rende 70% em relação au seja, seum carro da 10 km com
-             * gaslina fara  70 km etano. Portanto opreço do etanal não pode ultrapassar
-             * 70% do preço gasolina prara ser viavel financeiramento.
-             * 
-             * redimeto_etanol = (preco_etanol * 100)/ preço_gasolia
-             * 
-             * */
-            decimal preco_etanol, preco_gasolina, redimeto_etanol;
+            Console.WriteLine("Hello World!");
 
-            Console.WriteLine("Infome o preço do Etanal: ");
-            preco_etanol = Convert.ToDecimal(Console.ReadLine());
+            //   % de módulo, pega o resto de uma divisão
 
-            Console.WriteLine("Infoma o preço  da Gasolina: ");
-            preco_gasolina = Convert.ToDecimal(Console.ReadLine());
+        double resultado_divisao_por_dois;
+        int numero;   
 
-            //para resover a regra de 3
-            /*
-            |valor da gaolina  5,15           100
-                                       X
-             valor do etanlo  4.00              x
-            ------------------------------------------------------
-            5,15 X = 4.00 * 100
+            Console.WriteLine("Digite um numero inteiro qualquer: ");
+            numero = Convert.ToInt32(Console.ReadLine());
 
-            X  = 4 * 100 = Respta da  400
+      
 
-            4000 / 5.15 = respota 77,6699...
-            NÃO  DAUSAR A GASOLIA  PQ  PASSOU DE 71
-            */
+            resultado_divisao_por_dois = numero / 2;
 
+            Console.WriteLine("O resultado da divisão é {0} ", resultado_divisao_por_dois);
 
-            redimeto_etanol = (preco_etanol * 100) / preco_gasolina;
+            double resto_da_divisao = numero % 2;
+            //obisve que ele crioi varivel já  dentro
 
-            if(redimeto_etanol > 70)
-            {
-                Console.WriteLine("Compenda a Gasolina.");
-            }
-            else
-            {
-                Console.WriteLine("Comoensa o Etanal.");
-            }
+            Console.WriteLine("O resto da divisao do número por dois é {0}", resto_da_divisao);
+ 
+
+            // Modulo usado para  ver  par impar.
 
 
 
@@ -55,10 +37,6 @@ namespace _05_alua_04_03_21_contas_3
 
 
 
-
-
-
-            Console.ReadKey();
         }
     }
 }
